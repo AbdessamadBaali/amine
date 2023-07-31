@@ -23,7 +23,7 @@ header {
     height: 55px;   
 }
 header nav  {
-    width: 65%;
+    width: 75%;
 }
 header nav ul {
     display: flex;
