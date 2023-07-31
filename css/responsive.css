@@ -8,22 +8,28 @@ header nav{
 	top: 55px;
 	left: 0%;
 	width: 55%;
+	z-index: 2;
 }
 header nav ul {display: none !important; } 
-header nav ul li{	border-bottom: 0.5px solid #eee;}
+header nav ul li{	
+	border-bottom: 0.5px solid #eee;
+	padding: 15px;
+}
 header nav ul .nav-link{ padding: 1rem !important;}
 nav .menu-icon{
 	display: block;
-	cursor:pointer;
-	padding: 28px 0;
-	margin-right: 2%;
-	user-select: none;
-	position: absolute;
-	left: 20px;
-	top: -55px;
+    cursor: pointer;
+    padding: 28px 0;
+    margin-right: 2%;
+    user-select: none;
+    position: absolute;
+    left: -1px;
+    padding: 27px;
+    top: -56px;
+	background-color: black;
 }
 nav .menu-icon .nav-icon{
-	background-color: #fff;
+	background-color: #ffffffb6;
 	display: block;
 	height: 2px;
 	position: relative;
@@ -53,120 +59,78 @@ nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
 }
 nav .menu-btn:checked ~ ul {
 	display: block !important;
-	background-color: #00000080;
-}
-header nav ul li a:hover{
-    border-left: 2px solid var(--linkColor) !important;
-}
-main { height: 100vh;}
-
-main #home .content-home {
-	flex-direction: column;
-}
-main #home .content-home  .container-img-home {
-    width: 50%;
+	background-color: #fff;
 }
 
-#skills {    padding: 3rem;}
-
-#about {min-height: auto;}
-#about>div .box-img-about{	width: 0%;}
-#about>div .box-img-about img{  display: none;}
-#about >div::before {  width: 0vw;}
-
-#big-projects  .all-project  > .project,
-#contact #contact-paragraph { font-size: 1.05em;}
-#contact > .container-from-card {
-	margin: auto;
-	display: flex;
-	flex-direction: column;
 }
-.container-fuild #container-form  {width: 100%;}
-#contact .container-card {	width: 100%;}
-#contact .container-card .card-info {
-	height: 200px;
-	width: 400px;
-	margin: 15px 0;
-}
-}
-/* ====================RESPONSIVE 720PX =========================== */
+/* RESPONSIVE 720PX  */
 @media(max-width : 768px){
-	.container-content-home {
-		padding: 10px;
+
+}
+/* RESPONSIVE 576px  */
+@media(max-width : 576px){
+	#home > img {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		opacity: .4;
+		object-fit: cover;
+	}
+	#home > div {
+		z-index: 1;
+		width: 80%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
-	main {height: 95vh;}
-	/* about section */
-	#about {
-		padding: 0;}
-	#about >div {
-		width: 100% !important;
-		border: none;
-		border-radius: 0;
-		box-shadow: none;
+	#home h1 {
+		font-weight: 400;
+		font-size: 3rem;
 	}
-	#skills {    padding: 2rem;}
-	#big-projects  .all-project  > .project { width: 40%;}
-
-	#contact > .container-from-card {
+	#home h1::after  {
+		height: 0px;
+	}
+	#home h1::before  {
+		height: 0px;
+	}
+	#home > div p {
+		width: 100%;
+		color: white;
+		line-height: 25px;
+	}
+	#about_us {
+		min-height: 70vh;
+	}
+	#about_us .about-title {
+		position: relative;
+		margin-left: 110px !important;
+	}
+	#about_us .about-title::after {
+		content: "";
+		height: 50px;
+		width: 10%;
+		position: absolute;
+		left: 0%;
+		bottom: -30px;
 		margin: auto;
-		display: flex;
-		flex-direction: column;
+		background: url('../images/arc-line.svg');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position-x: center;
 	}
-	.container-fuild #container-form  {	width: 100%;}
-	#contact .container-card {	width: 100%;}
-	#contact .container-card .card-info {
-		height: 200px;
-		width: 400px;
-		margin: 15px 0;
-	}
-
-}
-@media(max-width : 576px){
-	#doc-main p {
+	#about_us .about-us-content {
 		width: 100%;
 	}
-	#doc-main > div{
-		padding: 30px 10px !important;
-	}
-	#sliderMore {
+	#about_us .about-us-img {
 		width: 100%;
-		border: 1px solid gray;
-		box-shadow: 1px 1px 5px black;
-		margin: auto;
 	}
-	main #home .content-home  .container-img-home {
-		width: 70%;
-	}
-	main {height: 90vh;}
-	/* home section */
-	.content-home h2,.content-home q{
-		-webkit-text-stroke: 0px  rgb(255, 255, 255);
-		text-shadow: none;
-	}
-	#home .waviy{	font-size: 18px !important;}
-	#home .fs-3 {	font-size: 16px !important;}
-	#home .fs-4, #home .fs-5 {
-		font-size: 14px !important;
-		margin: 0;
-	}
-	main #home .social-media{
-		bottom: 15%;
+	#about_us img {
+		width: 100%;
 	}
 
-	#skills h3{
-		padding: 1rem 0 !important;
+	#contact_us .w-50 {
+		width: 90% !important;
 	}
-	#skills .desc {
-		padding: 0 0rem ;
-	}
-	/* project section */
-	#big-projects {	padding: 0 ;}
-	#big-projects  .all-project  > .project { width: 320px;}
-	#skills .w-50 {	width: 100% !important;}
-	#other .shadow {	box-shadow: none !important	}
-	#contact .container-card .card-info {	width: 300px;}
+	
 }
